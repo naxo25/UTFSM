@@ -1,0 +1,36 @@
+SELECT nom_emp,salario_sem FROM empleado 
+WHERE salario_sem > (SELECT salario_sem FROM empleado WHERE nom_emp = 'Cecilia');
+
+SELECT nom_emp,salario_sem FROM empleado 
+WHERE salario_sem > = (SELECT SUM(salario_sem) FROM empleado WHERE empleo = 'productor');
+
+SELECT nom_emp FROM empleado
+WHERE salario_sem > ANY (SELECT salario_sem FROM empleado WHERE empleo = 'supervisor');
+
+SELECT COUNT (nom_emp) "Empleados por Depto",cod_depto FROM empleado
+WHERE salario_sem > (SELECT AVG(salario_sem) FROM empleado) GROUP BY cod_depto;
+
+     
+SELECT COUNT (nom_emp) "Empleados en quilpue" FROM empleado
+WHERE cod_depto IN (SELECT cod_depto FROM depto WHERE ubicacion = 'Quilpué');
+
+SELECT nom_emp,empleo,nom_depto,ubicacion FROM empleado JOIN depto ON empleado.cod_depto=depto.cod_depto;
+     
+SELECT nom_emp,cod_supervisor,nom_emp AS nom_supervisor FROM empleado WHERE cod_supervisor IN (SELECT cod_emp FROM empleado);
+
+SELECT nom_emp,nom_depto,sueldo_minimo,sueldo_maximo FROM empleado
+JOIN depto  ON empleado.cod_depto = depto.cod_depto JOIN sueldo ON empleado.grado     = sueldo.grado;
+
+SELECT nom_emp FROM empleado
+WHERE EXISTS (SELECT * from depto WHERE empleado.cod_depto = depto.cod_depto AND depto.ubicacion = 'Valpo');
+                                             
+SELECT cod_depto,nom_depto FROM depto WHERE 4 < (SELECT COUNT(nom_emp) FROM empleado WHERE depto.cod_depto = empleado.cod_depto);
+      
+SELECT nom_emp,empleo,fecha_ingreso FROM empleado WHERE fecha_ingreso <= (SELECT MIN(fecha_ingreso) FROM empleado);
+      
+SELECT nom_emp,nom_depto,empleo,salario_sem FROM empleado JOIN depto on empleado.cod_depto = depto.cod_depto
+WHERE empleado.cod_depto = (SELECT cod_depto FROM empleado WHERE nom_emp = 'Cecilia') GROUP BY NOM_EMP
+HAVING salario_sem > (SELECT AVG(salario_sem) FROM empleado WHERE cod_depto = 30);
+     
+SELECT nom_emp,empleo,nom_depto,ubicacion,salario_sem FROM empleado
+JOIN depto on empleado.cod_depto = depto.cod_depto WHERE depto.ubicacion = ('Valpo') or depto.ubicacion = ('Quilpué');

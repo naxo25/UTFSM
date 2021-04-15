@@ -1,0 +1,25 @@
+C:\Users\Diego\Documents\Visual Studio 2005\Projects\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.exe
+C:\Users\Diego\Documents\Visual Studio 2005\Projects\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.xml
+C:\Users\Diego\Documents\Visual Studio 2005\Projects\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.pdb
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.exe
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.xml
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.pdb
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.exe
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.pdb
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.xml
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Resources.resources
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.vbproj.GenerateResource.Cache
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_Game.resources
+C:\Users\lPixel\Desktop\Trabajo-s!\PepE!\Taller_Soft\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_init.resources
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.exe
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.xml
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.pdb
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.exe
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.pdb
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.xml
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_init.resources
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_Game.resources
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Resources.resources
+C:\Users\naxo\Desktop\taller de sw\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.vbproj.GenerateResource.Cache

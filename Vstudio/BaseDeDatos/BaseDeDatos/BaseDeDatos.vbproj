@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9FE5B30-381F-463A-8CAD-63F88C29F36F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BaseDeDatos.My.MyApplication</StartupObject>
+    <RootNamespace>BaseDeDatos</RootNamespace>
+    <AssemblyName>BaseDeDatos</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BaseDeDatos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BaseDeDatos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alumno.vb" />
+    <Compile Include="BsnNegocio.vb" />
+    <Compile Include="BsnUsuario.vb" />
+    <Compile Include="Conexion.vb" />
+    <Compile Include="ConsultarAlumno.Designer.vb">
+      <DependentUpon>ConsultarAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaoDatos.vb" />
+    <Compile Include="DaoUsuario.vb" />
+    <Compile Include="EnumGenero.vb" />
+    <Compile Include="EnumOperaciones.vb" />
+    <Compile Include="asdads.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asdads.Designer.vb">
+      <DependentUpon>asdads.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInsertarAlumno.Designer.vb">
+      <DependentUpon>FrmInsertarAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInsertarAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipalvb.Designer.vb">
+      <DependentUpon>FrmPrincipalvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipalvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Persona.vb" />
+    <Compile Include="suduku.Designer.vb">
+      <DependentUpon>suduku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="suduku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConsultarAlumno.resx">
+      <DependentUpon>ConsultarAlumno.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asdads.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>asdads.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInsertarAlumno.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmInsertarAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipalvb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPrincipalvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suduku.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>suduku.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

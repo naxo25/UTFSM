@@ -1,0 +1,28 @@
+tar -ctfz archivo-tar  direccion-a-comprimir
+tar -xtfz archivo-tar direccion-a-descomprimir
+ln destino/archivo nombre --> pa los rudos
+ln -s destino-directorio nombre --> pa los blandos o simbolicos
+
+mkdir /destino --> nuevo directorio en raiz.  mkdir /destino <> mkdir destino
+find (directorio raíz) (criterios) (acción)
+find / -name ifcfg* 
+find / -size +10M
+find / -mtime +3 {el compilador asume que son dias por sia}
+find / -user root -perm 000
+find /etc –name *.conf –exec cp ‘{}’ /tmp \; {busco en /etc los que terminen en .conf y cp para copiar a /tmp}
+						-exec permite ejecutar un comando sobre la busqueda
+para agregar un disco a la maquina virtual
+Manage, virtual settings, add, hard disk y next, sata, despues puros next y ok.
+df -h para ver los dispositivos montados y donde estan
+fdisk -l para ver cual es el nombre del ultimo dispositivo ej sdb
+fdisk /dev/sdb 
+n
+p
+1
+enter
+enter
+p --> para ver con q nombre quedo
+w
+mkfs -t ext4 /dev/sdb1
+mount -t ext4 /dev/sdb1 /destino
+ls /destino

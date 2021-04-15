@@ -1,0 +1,241 @@
+Laboratorio 1: PL/SQL								
+
+OBJETIVOS: Acercamiento al desarrollo de bloques anónimos utilizando controles de iteración.
+
+
+EJERCICIOS
+
+Utilizando SQLdeveloper:
+
+1) DBMS_OUTPUT es un depurador de Oracle que sirve para visualizar, se activa con   SET SERVEROUTPUT ON:
+
+Coloque en SqlDeveloper:
+
+SET SERVEROUTPUT ON;
+
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Hola');
+END;
+
+
+2) Construya un bloque anónimo que muestre la fecha actual.  
+
+•	Fecha actual: Select sysdate FROM dual;  
+
+3)  Busque en el fichero, en el punto “descargas” de la asignatura y cargue el create e insert_1. Luego ejecute:
+
+alter table empleado
+add grado int;
+
+y cargue el insert_2. 
+
+A  través de un bloque anónimo seleccione el grado y el sueldo máximo que tiene el sueldo mínimo de 700
+
+4) ¿Que hace el comando SET VERIFY ON/OFF?  Busqué por Internet y utilícelo en el siguiente ejercicio
+
+5) Para este ejercicio, se trabajará con una variable de sustitución para leer valores desde pantalla. Va precedida del símbolo &. Si esta variable no está inicializada, se le pedirá el valor al usuario:
+
+
+
+
+SET ServerOutput ON;
+SET VERIFY OFF;
+DECLARE
+vv NUMBER :=&v;
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Valor de v: '||vv);
+END;
+ 
+Ejercicio:
+Escriba un bloque anónimo que permita sacar el promedio de dos números ingresados por el usuario. Muestre el resultado.
+
+6) Utilizando IF – ELSIF –ELSE ó CASE permita que el usuario ingrese un valor de sueldo y que el bloque anónimo le entregue un mensaje indicando el nivel del mismo. Rangos: 0- 1300 mensaje: Sueldo Nivel C, 1301-2999 mensaje: Sueldo Nivel B y mayor a 3000 mensaje: Sueldo Nivel A.
+
+DECLARE 
+SUELDO_INGRES NUMBER:=&SI;
+BEGIN
+IF SUELDO_INGRES > 0 AND SUELDO_INGRES <= 1300 THEN
+  DBMS_OUTPUT.PUT_LINE('Sueldo Nivel C');
+  ELSIF SUELDO_INGRES > 1300 AND SUELDO_INGRES < 3000 THEN
+  DBMS_OUTPUT.PUT_LINE('Sueldo Nivel B');
+  ELSIF SUELDO_INGRES >= 3000 THEN
+  DBMS_OUTPUT.PUT_LINE('Sueldo Nivel A');
+END IF;
+END;
+
+7) Seleccione el código, nombre y salario del empleado (debe devolver una sola fila) que tiene comisión menor a 400 y distinta de 0. Defina un RECORD para desarrollar el ejercicio. Muestre por pantalla los datos.
+
+DECLARE 
+TYPE DATOS IS RECORD
+( V_CODIGO NUMBER,
+  V_NOMBRE CHAR(15),
+  V_SALARIO NUMBER
+);
+dDATOS DATOS;
+BEGIN
+SELECT COD_EMP, NOM_EMP, SALARIO_SEM INTO dDATOS.V_CODIGO, dDATOS.V_NOMBRE, dDATOS.V_SALARIO FROM EMPLEADO WHERE COMISION >0 AND COMISION < 400;
+DBMS_OUTPUT.PUT_LINE(dDATOS.V_CODIGO|| ' ' ||dDATOS.V_NOMBRE|| ' ' ||dDATOS.V_SALARIO);
+END;
+
+8) Utilizando FOR IN LOOP haga un bloque anónimo que muestre:
+
+Valor: 1
+Valor: 2
+Valor: 3
+Valor: 4
+Valor: 5
+Valor: 6
+Valor: 7
+Valor: 8
+Valor: 9
+Valor: 10
+
+DECLARE
+I NUMBER;
+BEGIN
+FOR I IN 1..10 
+LOOP
+  DBMS_OUTPUT.PUT_LINE('VALOR: '||I);
+END LOOP;
+END;
+
+9)  Utilizando LOOP –EXIT WHEN haga un bloque anónimo que según el ingreso del número del usuario, escriba el número y los subsiguientes, siempre y cuando sea menor a 100. Por ejemplo, al ingresar el número 96, que muestre:
+
+Valor: 96
+Valor: 97 
+Valor: 98
+Valor: 99
+Valor: 100
+
+Si es mayor que muestre solo el valor ingresado.
+
+Set serveroutput on;
+Declare
+	v number :=  &v;
+Begin
+Loop
+	Dbms_output.put_line(‘valor: ‘|| v);
+	V := v + 1;
+	Exit when v > 100;
+End loop;
+End;
+
+
+10) Utilizando WHILE – LOOP haga lo mismo del ejercicio 9
+
+DECLARE
+N NUMBER:= &numero;
+BEGIN
+WHILE (N<=100) LOOP
+	DBMS_OUTPUT_PUT_LINE('VALOR: '||N);
+	N:=N+1;
+END LOOP;
+END;
+
+11) Sobre Commit, rollback y savepoint. Ejecute los siguientes procedimientos. Comente que hacen y los resultados que arrojan.
+
+a)
+ 
+show autocommit
+
+CREATE TABLE t0 (
+testcol  NUMBER);
+
+INSERT INTO t0 (testcol) VALUES (1);
+
+COMMIT;
+
+INSERT INTO t0 (testcol) VALUES (2);
+
+COMMIT WORK;
+
+b)
+
+SELECT * FROM t0;
+
+INSERT INTO t0 (testcol) VALUES (3);
+
+SELECT * FROM t0;
+
+ROLLBACK;
+
+SELECT * FROM t0;
+
+INSERT INTO t0 (testcol) VALUES (4);
+
+SELECT * FROM t0;
+
+ROLLBACK WORK;
+
+SELECT * FROM t0;
+
+c)
+
+CREATE TABLE t1 (
+testcol  NUMBER);
+
+DECLARE
+ i INTEGER := 3;
+BEGIN
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  SAVEPOINT A;
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+/*
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+*/
+  COMMIT; 
+EXCEPTION
+  WHEN ZERO_DIVIDE THEN 
+    ROLLBACK TO SAVEPOINT A;
+    COMMIT;
+END testblock;
+/
+
+SELECT * FROM t1;
+
+TRUNCATE TABLE t1;
+
+DECLARE
+ i INTEGER := 3;
+BEGIN
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  SAVEPOINT A;
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  i := i-1;
+  INSERT INTO t1 (testcol) VALUES (10/i);
+
+  COMMIT; 
+EXCEPTION
+  WHEN ZERO_DIVIDE THEN 
+    ROLLBACK TO SAVEPOINT A;
+    COMMIT;
+END testblock;
+/
+
+SELECT * FROM t1;
+
+************************************************************************
+
+Escriba las sentencias SQL en el bloc de notas u otro similar, luego guarde el archivo como lab_1
+
+Al finalizar envie el archivo a catherine.gomez@usm.cl con el título PL_LAB_1 y en el email o en el archivo coloque su nombre.

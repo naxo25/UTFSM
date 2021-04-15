@@ -1,0 +1,12 @@
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.pdb
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\bin\Debug\SudokuPDI.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.vbprojAssemblyReference.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_init.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Sudoku_PDI_Game.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.Resources.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.vbproj.GenerateResource.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.vbproj.CoreCompileInputs.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\SudokuPDI\SudokuPDI\obj\Debug\SudokuPDI.pdb

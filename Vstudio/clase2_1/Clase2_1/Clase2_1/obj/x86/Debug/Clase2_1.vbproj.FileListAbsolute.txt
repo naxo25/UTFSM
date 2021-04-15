@@ -1,0 +1,12 @@
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\bin\Debug\Clase2_1.exe
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\bin\Debug\Clase2_1.pdb
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\bin\Debug\Clase2_1.xml
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2.frmInicial.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2.Resources.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2_1.vbproj.GenerateResource.Cache
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2_1.exe
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2_1.xml
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2_1.pdb
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2.FrmPrincipal.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2.frmConsultas.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\Clase2_1\Clase2_1\obj\x86\Debug\Clase2_1.vbprojResolveAssemblyReference.cache

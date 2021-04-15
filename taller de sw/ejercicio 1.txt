@@ -1,0 +1,11 @@
+create or replace proce (
+salario in empleado.salario_sem%type;
+nombre out empleado.nom_emp%type; )
+is
+begin
+for c1 in (selec nom_emp into nombre from empleado where salario = salario_sem);
+dbms_output.put_line(nombre);
+exception
+when no_data_found then
+dbms_output.put_line('no hay gente');
+end proce;

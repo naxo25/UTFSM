@@ -1,0 +1,83 @@
+import java.util.*;
+
+public class Ygnacio{
+
+	public static void main (String [] args){
+	Scanner Sc = new Scanner(System.in);
+	String op = "S";
+	byte Grados, Anio;
+	Bebida B = new Bebida("Rica","Sprite","Fanta",15,7000);
+		do {    
+			Grados = sc.nextByte();
+			Anio = sc.nextByte();
+			BebidaA A = new BebidaA(Grados,Anio);
+			System.out.println(B.datos() + A.datos() + A.CalcularP());
+			BebidaG G = new BebidaG();
+			G.Tipo = sc.nextLine();
+			G.FechaV = sc.nextLine();
+			System.out.println(B.datos() + G.datos());
+			System.out.print("Desea Seguir? ");
+			op = sc.nextLine();
+		} while(op.equals("S"));
+	}
+}
+
+public class Bebida{
+
+	String Sabor, Marca, Nombre;
+	short Cap;
+	int Precio;
+
+	public Bebida(){
+	}
+
+	public Bebida(String S, String M, String N, short C, int P){
+		Sabor = S;
+		Marca = M;
+		Nombre = N;
+		Cap = C;
+		Precio = P;
+	}
+
+	public String datos(){
+		return "\nSabor " + Sabor + "\nMarca " + Marca + "\nNombre " + Nombre + "\nCapacidad " + Cap + "\nPrecio " + Precio;
+	}
+
+}
+
+public class BebidaA extends Bebida{
+	byte Grados, Anio;
+	
+	public BebidaA(){
+	}
+
+	public BebidaA(byte gr, byte an){
+		Grados = gr;
+		Anio = an;
+	}
+
+	public String datos(){
+		return "\nGrados " + Grados + "\nAnio " + Anio;
+	}
+
+	public double CalcularP(byte Precio){
+		double porce = 0;
+		if(Anio >= 2 || Anio <= 4) porce = 0.1;
+		if(Anio >= 5 || Anio <= 9) porce = 0.2;
+		if(Anio >= 10) porce = 0.3;
+		return (porce * Precio) + Precio;
+	}
+
+}
+
+public class BebidaG extends BebidaG{
+	String Tipo, FechaV;
+	
+	public BebidaG(){
+	}
+	
+	public String datos(){
+		return "\nTipo " + Tipo + "\nFechaV " + FechaV;
+	}
+
+}

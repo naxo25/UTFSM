@@ -1,0 +1,10 @@
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\bin\Debug\suduku.exe
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\bin\Debug\suduku.pdb
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\bin\Debug\suduku.xml
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.suduku.resources
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.Resources.resources
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.vbproj.GenerateResource.Cache
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.exe
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.xml
+C:\Users\naxo\Desktop\taller de sw\suduku\suduku\obj\Debug\suduku.pdb

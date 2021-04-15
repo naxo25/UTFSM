@@ -1,0 +1,42 @@
+program claseklfome;
+uses crt,dos;
+type st1 = string[1];
+var i : byte; r : st1;
+
+procedure pelea;
+begin
+     repeat
+     i := random(6) + 1;
+     if (i = 2) or (i = 3) or (i = 5) then
+          writeln('da¤o normal');
+     if (i = 4) then
+          writeln('da¤o critico');
+     if (i = 1) or (i = 6) then
+          writeln('Esquivaste');
+     writeln('salir de la pelea?');
+     readln(r);
+     until r = 's';
+end;
+
+begin
+clrscr;
+       r := 'n';
+       writeln('s = si  n = no');
+       while r <> 's' do
+       begin
+       clrscr;
+            i := random(6) + 1;
+            if (i = 1) or (i = 3) or (i = 5) then
+            begin
+                writeln('Te toca pelear');
+                pelea;
+            end
+       else
+            begin
+                writeln('No pasa nada');
+                pelea;
+            end;
+       writeln('salir del juego?');
+       readln(r);
+       end;
+end.

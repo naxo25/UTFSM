@@ -1,0 +1,9 @@
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\bin\Debug\Clase2.exe
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\bin\Debug\Clase2.pdb
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\bin\Debug\Clase2.xml
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.Form1.resources
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.Resources.resources
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.vbproj.GenerateResource.Cache
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.exe
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.xml
+C:\Users\nacho\AppData\Local\Temporary Projects\Clase2\obj\x86\Debug\Clase2.pdb

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Calculadora de Mascotas</title>
+    </h:head>
+    <h:body>
+        <p:panel header="CALCULADORA DE EDAD MASCOTA">
+            <p:fieldset legend="DATOS MASCOTA">
+                <h:form>
+                    <h:panelGrid id="pnlFormulario" columns="3">
+                        <p:outputLabel for="nombre" value="Nombre" />
+                        <p:inputText id="nombre" value="#{calc.nombre}" 
+                                     required="true" 
+                                     requiredMessage="Favor, ingrese el nombre de la mascota"
+                                     />
+                        <p:message for="nombre" />
+
+                        <p:outputLabel for="fechaNacimiento" value="Fecha Nacimiento" />
+                        <p:calendar id="fechaNacimiento" 
+                                    value="#{calc.fechaNacimiento}"
+                                    pattern="dd/MM/yyyy"       
+                                    required="true"
+                                    requiredMessage="Favor, ingrese la fecha de nacimiento de la mascota"
+                                    converterMessage="Favor, ingrese una fecha en formato dd/mm/aaaa"
+                                    />
+                        <p:message for="fechaNacimiento" />
+
+                        <p:outputLabel for="idRaza" value="Raza" />
+                        <p:selectOneMenu id="idRaza" value="#{calc.idRaza}">
+                            <f:selectItems var="raza" value="#{calc.listaRaza}"
+                                           itemLabel="#{raza.nombre}" 
+                                           itemValue="#{raza.id}" 
+                                           />
+                        </p:selectOneMenu>
+                        <p:message for="idRaza" />
+
+                        <h:outputText />
+                        <p:commandButton 
+                            value="Calcular"
+                            actionListener="#{calc.calcular()}"
+                            update="pnlFormulario"
+                            /> 
+
+                    </h:panelGrid>
+
+                    <p:messages autoUpdate="true" showDetail="true" globalOnly="true" />
+
+                </h:form>                
+            </p:fieldset>
+        </p:panel>
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+    </h:body>
+</html>
+

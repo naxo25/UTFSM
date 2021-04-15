@@ -1,0 +1,48 @@
+create or replace proce (
+cod in depto.cod_depto%type,
+cant out number,
+super out empleado.cod_emp%type,
+nombre out empleado.nom_emp%type,
+dep out empleado. )
+is
+cursor c1 is select count (cod_emp) cant, cod_supervisor
+from empleado where cod_depa = cod group by cod_supervisor;
+begin
+open c1;
+loop
+fetch c1 into cant, super;
+select nom_emp into nom_super from empleado where cod_emp = super;
+exit when c1%notfound;
+dbms_output.put_line(cant ||' empleados a cargo de este wn '|| nom_super ||' codigo '|| nom_super ||' del depa '|| cod_depa);
+end loop;
+close c1;
+end proce;
+
+declare 
+cod depto.cod_depto%type;
+cant number;
+super empleado.cod_supervisor%type;
+nombre empleado.nom_emp%type;
+begin
+proce(30,cant,super,nombre,dep);
+end;
+
+
+
+create or replace procedure pro3
+(v_cod in out depto.cod_depto%type,
+v_cant out number,
+v_super out empleado.cod_supervisor%type,
+v_nomb out empleado.nom_emp%type)
+is
+cursor c1 is select count(cod_emp) cant, cod_supervisor from empleado where v_cod = cod_depto group by cod_supervisor; 
+begin
+open c1;
+loop
+  fetch c1 into v_cant,v_super;
+  select nom_emp into v_nomb from empleado where cod_emp = v_super;
+  exit when c1%notfound;
+  dbms_output.put_line(v_cant || ' ' || v_super|| 'nom_super: '||v_nomb);
+end loop;
+close c1;
+end pro3;

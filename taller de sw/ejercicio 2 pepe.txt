@@ -1,0 +1,24 @@
+create or replace procedure pro1
+(v_salario in empleado.salario_sem%TYPE,
+v_nom_emp out empleado.nom_emp%TYPE)
+is 
+CURSOR c_pro is SELECT nom_emp FROM empleado where salario_sem = v_salario;
+begin
+open c_pro;
+LOOP
+  fetch c_pro into v_nom_emp;
+  exit when c_pro %NOTFOUND;
+  dbms_output.put_line('nombre: '||v_nom_emp);
+  
+end loop;
+close c_pro;
+exception
+when too_many_rows then
+dbms_output.put_line('muchos wns');
+end pro1;
+
+declare
+v_n empleado.nom_emp%type;
+begin
+pro1(1250,v_n);
+end;

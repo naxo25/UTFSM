@@ -1,0 +1,5 @@
+D:
+cd nombre carpeta
+carga ruta
+javac asdf.java compila y crea la class
+java asdf ejecuta

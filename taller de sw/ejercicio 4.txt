@@ -1,0 +1,21 @@
+create or replace function ecuacion
+(primer number, segundo number)
+return number
+is 
+result number;
+begin
+  if primer <> 0 then result:= -segundo/primer;
+  elsif primer = 0 and segundo <> 0 then result:= 0;
+  elsif primer = 0 and segundo = 0 then result:= -1 ;
+  end if;
+return result;
+end;
+
+declare
+valor number;
+valor2 number;
+begin
+valor := 1;
+valor2 := 2;
+dbms_output.put_line(ecuacion(valor,valor2));
+end;

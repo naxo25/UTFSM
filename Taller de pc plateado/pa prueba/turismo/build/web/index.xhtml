@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Empresa de Turismo</title>
+    </h:head>
+    <h:body>
+        <p:panel header="CALCULADORA DE EDAD MASCOTA">
+            <p:fieldset legend="DATOS MASCOTA">
+                <h:form>
+                    <h:panelGrid id="Frm1" columns="3">
+                        <p:outputLabel for="rut" value="Rut del cliente ( formato: 12345678-K)" />
+                        <p:inputText id="rut" value="#{tur.rut}" 
+                                     required="true" 
+                                     maxlength="11"
+                                     validator="#{tur.validar}"                                     
+                                     requiredMessage="Favor, ingrese un rut con el formato 12345678-K"
+                                     />
+                        <p:message for="rut" />
+
+                        <p:outputLabel for="nombre" value="Nombre Cliente:" />
+                        <p:inputText id="nombre" value="#{tur.nombre}" 
+                                     required="true" 
+                                     validator="#{tur.validar_minimo}"
+                                     requiredMessage="Debe ingresar un nombre de minimo 5 caracteres"
+                                     />
+                        <p:message for="nombre" />
+                        
+                        <p:outputLabel for="numero" value="Destino" />
+                        <p:selectOneMenu id="numero" value="#{tur.id}">
+                            <f:selectItems var="lista" value="#{tur.lista}"
+                                           itemLabel="#{lista.nombre}" 
+                                           itemValue="#{lista.id}" 
+                                           />
+                        </p:selectOneMenu>
+                        <p:message for="numero" />                     
+                        
+                        <p:outputLabel for="fechaI" value="Fecha Inicio:" />
+                        <p:calendar id="fechaI" 
+                                    value="#{tur.inicio}"
+                                    pattern="dd/MM/yyyy"       
+                                    required="true"
+                                    mindate="calwidget.today()"
+                                    requiredMessage="Debe ingresar una fecha"
+                                    converterMessage="El formato de la fecha debe ser dd/mm/aaaa"
+                                    />
+                        <p:message for="fechaI" />  
+                        
+                        
+                        
+                        <p:outputLabel for="fechaD" value="Fecha Termino" />
+                        <p:calendar id="fechaD" 
+                                    value="#{tur.termino}"
+                                    pattern="dd/MM/yyyy"       
+                                    required="true"
+                                    requiredMessage="Debe ingresar una fecha"
+                                    converterMessage="El formato de la fecha debe ser dd/mm/aaaa"
+                                    />
+                        <p:message for="fechaD" />
+                        
+                        <p:outputLabel for="vip" value="Habitación VIP:" />
+                        <p:selectOneRadio id="vip" value="#{tur.vip}" 
+                                          required="true" 
+                                          requiredMessage="Debe seleccionar opción">
+                                <f:selectItem itemLabel="Si" itemValue="True" />
+                                <f:selectItem itemLabel="No" itemValue="False" />
+                        </p:selectOneRadio>
+                        
+                        <h:outputText />
+                        <p:commandButton 
+                            value="Reservar"
+                            actionListener="#{tur.reservar()}"
+                            update="Frm1"
+                            /> 
+
+                    </h:panelGrid>
+                
+                    <p:messages autoUpdate="true" showDetail="true" globalOnly="true" />
+                
+                </h:form>                
+            </p:fieldset>
+        </p:panel>
+    </h:body>
+</html>
+

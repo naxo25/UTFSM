@@ -1,0 +1,29 @@
+PROGRAM game;
+USES CRT;
+
+VAR vida, atq, def : integer;
+
+PROCEDURE ALGO(vida:integer);
+VAR i : byte;
+BEGIN
+     if vida < 66 then
+     begin
+          WRITELN('Vida : ',vida);
+          WRITELN('Ataque : ',atq);
+          WRITELN('Defensa:',def);
+     end;
+     i:=0; gotoxy(20,1);
+     while i < 21 DO
+     BEGIN
+          writeln('l');
+     END;
+END;
+
+{0,1,2,3,3,2,1,0}
+
+BEGIN
+CLRSCR;
+       vida:=63;
+       ALGO(vida);
+       READLN;
+END.

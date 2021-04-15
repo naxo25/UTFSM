@@ -1,0 +1,37 @@
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\bin\Debug\Database\Database.accdb
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\bin\Debug\BaseDeDatos.xml
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.Form1.resources
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.Resources.resources
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.vbproj.GenerateResource.Cache
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.exe
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.xml
+C:\Users\nacho\AppData\Local\Temporary Projects\BaseDeDatos\obj\x86\Debug\BaseDeDatos.pdb
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.exe
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.xml
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.pdb
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\bin\Debug\Database\Database.accdb
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.xml
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.Resources.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.vbproj.GenerateResource.Cache
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmLogin.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmPrincipal.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmConsultarAlumno.resources
+C:\Users\nacho\documents\visual studio 2010\Projects\BaseDeDatos\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmInsertarAlumno.resources
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.exe
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.xml
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.pdb
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\bin\Debug\Database\Database.accdb
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\bin\Debug\BaseDeDatos.xml
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.vbprojResolveAssemblyReference.cache
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmConsultarAlumno.resources
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDeDatos_2 - Copy\BaseDeDatos\obj\x86\Debug\BaseDeDatos.FrmLogin.resources
+C:\Users\nacho\Documents\Visual Studio 2010\Projects\BaseDe

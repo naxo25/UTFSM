@@ -1,0 +1,11 @@
+declare
+cursor c1 is selec cod_emp, salario_emp from empleado where comision = 0 for update;
+begin
+open c1;
+fetch c1 into emp, salario;
+loop
+select sueldo_minimo into sueldo_min from sueldo where salario >= sueldo_minimo and salario <= sueldo_maximo;
+update empleado set comision = sueldo_min * 0.2 where current of c1;
+
+end lopp;
+end;

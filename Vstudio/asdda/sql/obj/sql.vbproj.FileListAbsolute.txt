@@ -1,0 +1,5 @@
+C:\Users\lPixel\Documents\Visual Studio 2005\Projects\WindowsApplication2\sql\bin\sql.dll
+C:\Users\lPixel\Documents\Visual Studio 2005\Projects\WindowsApplication2\sql\bin\sql.pdb
+C:\Users\lPixel\Documents\Visual Studio 2005\Projects\WindowsApplication2\sql\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lPixel\Documents\Visual Studio 2005\Projects\WindowsApplication2\sql\obj\Debug\sql.dll
+C:\Users\lPixel\Documents\Visual Studio 2005\Projects\WindowsApplication2\sql\obj\Debug\sql.pdb

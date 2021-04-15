@@ -1,0 +1,91 @@
+<HTML>
+<style>
+	h1{
+		text-align: center;
+		color: #04B4AE;
+	}
+	h2{
+		text-align: center;
+		color: #6E6E6E;
+	}
+	h3{
+		color: #6E6E6E;
+	}
+	body{
+		background-color: #5882FA;
+	}
+	div {
+		background-color: gray;
+		width: 300px;
+		border: 25px solid green;
+		padding: 25px;
+		margin: 25px;
+	}
+
+</style>  <!--#424242-->
+
+	<HEAD>
+		<META CHARSET = "UTF-8">
+		<title>Arrendar</title>
+	</HEAD>
+
+	<BODY background="fondo_arrendar.jpg">
+	
+        <form method = POST action ="arrendar.php">
+        <form method = POST1 action ="pagar.php">
+        <h2><u>ARRIENDO DE PELICULA</u> <BR><BR> </h2>
+		<center>
+		<table border="1" cellpadding="10px" cellspacing="10px">
+			<tr>
+				<td>
+					<h3>
+						Rut de cliente: <INPUT TYPE = "TEXT" NAME = "TXT_RUT_CLIENTE" SIZE = 6 MAXLENGTH = 8>-
+										<INPUT TYPE = "TEXT" NAME = "TXT_DIGITO" SIZE = 1 MAXLENGTH = 1> &nbsp; &nbsp; &nbsp;
+					<h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>
+						Codigo del video: <INPUT TYPE = "TEXT" NAME = "TXT_COD_VIDEO" SIZE = 5 MAXLENGTH = 5>
+					<h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>
+					<h2>
+                        <INPUT TYPE = "SUBMIT" name="Arrendar" value="Arrendar" style='width:80px; height:40px'>
+						<a href="TrabajoPhp.html"><button type='button' style='width:80px; height:40px'>Regresar</button></a>
+					</h2>
+					</h3>
+				</td>
+			</tr>
+		</table>
+		</center>
+
+		</form>
+	</BODY>
+	
+<?php
+     public class Heredar {
+           String Rutsito;
+           
+           Public Heredar() {
+           }
+
+           Public void setRutsito (String R){
+                  Rutsito = R;
+           }
+           
+           Public String getRutsito () {
+                  return Rutsito;
+           }
+     }
+     
+     $Ru = new Heredar();
+     $Ru.setRutsito(TXT_RUT_CLIENTE);
+
+?>
+
+</HTML>

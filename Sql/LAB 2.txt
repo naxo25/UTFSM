@@ -1,0 +1,200 @@
+PL/SQL								
+
+Laboratorio 2: CURSORES y EXCEPCIONES
+
+OBJETIVOS:
+Acercar al alumno a la práctica del manejo de cursores y algunas excepciones.
+
+
+EJERCICIOS
+
+Utilizando SqlDeveloper:
+
+
+1)	Escriba el siguiente código para PL/SQL y comente que hace. Explique por que está generando una excepción.
+
+DECLARE
+           v_nomemp VARCHAR2(50);
+BEGIN
+  	SELECT nom_emp
+  	INTO v_nomemp
+  	FROM empleado
+     WHERE cod_supervisor = 7839;
+      dbms_output.put_line('La lectura del cursor es: ' || v_nomemp);
+EXCEPTION
+WHEN TOO_MANY_ROWS THEN 
+dbms_output.put_line ( ‘MUCHAS FILAS’);
+end;
+
+
+2)	Reescriba el código de forma que muestre lo que se solicita.
+
+3)	Escriba un bloque anónimo para seleccionar el nombre de los empleados cuyo supervisor tiene cod_supervisor igual a 7368. Si revisa la tabla empleado, no existe ningún empleado, por lo tanto utilice NO_DATA_FOUND para enviar un mensaje.
+
+set serveroutput on;
+set verify of;
+declare
+	v_nomemp varchar2(50);
+Begin
+	select nom_emp into v_nomemp from empleado where cod_supervisor = 7368;
+	dbms_output.put_line('La lectura del cursor es: ' || v_nomemp);
+	exception
+	when no_data_found then
+	dbms_output.put_line('tiene repeticiones');
+end;
+
+4)	Muestre los nombres de los departamentos con código de departamento distinto  a 10 implementando un cursor. Declare una variable que utilice %ROWTYPE para definir su tipo. Utilíce el atributo %FOUND del cursor para condicionar mostrar el nombre del departamento sino que salga del bloque.
+
+set serveroutput on;
+set verify of;
+declare
+cursor ccursor is select nom_depto from depto where cod_depto <> 10;
+registro ccursor%rowtype;
+begin
+open ccursor;
+fetch ccursor into registro;
+WHILE ccursor%FOUND
+LOOP
+	dbms_output.put_line('la wea tiene: '|| registro.nom_depto);
+	fetch ccursor into registro;
+END LOOP;
+close ccursor;
+end;
+
+5)	Muestre el código del empleado, nombre del empleado y departamento al cual pertenece implementando un cursor. Defina las variables utilizando %TYPE.  Para la iteración ocupe LOOP, EXIT WHEN con %NOTFOUND y END LOOP. Además debe indicar el total de registros afectados (%ROWCOUNT)
+
+declare
+cursor c1 is select E.cod_emp, E.nom_emp, D.NOM_depto from empleado E, depto D  WHERE E.COD_DEPTO=D.COD_DEPTO;
+registro c1%rowtype;
+begin
+open c1;
+loop
+  fetch c1 into registro;
+  exit when c1%notfound;
+  DBMS_OUTPUT.PUT_LINE(registro.cod_emp ||' '|| registro.nom_emp ||' '||registro.nom_depto||' '|| c1%rowcount);
+end loop;
+close c1;
+end;
+
+Resultado esperado:
+
+CODIGO NOMBRE       DEPTO
+7839   Karla          Finanzas
+7566   Juan P.        Desarrollo
+7902   Fabián         Desarrollo
+7369   Juan           Desarrollo
+7698   Blanca         Ventas
+7499   Allen          Ventas
+….
+Total de registros: XX
+
+6)	Haga  el ejercicio anterior con WHILE – LOOP 
+
+7)	Haga el ejercicio anterior con FOR – LOOP. Ver el uso de %ROWCOUNT.
+
+8)	El siguiente código debe ser depurado. Depúrelo e indique porque aparece la excepción de cursor inválido. 
+
+SET SERVEROUTPUT ON;
+DECLARE 
+CURSOR c_sueldo
+ IS
+ SELECT *
+ FROM sueldo;
+
+Reg_sueldo  sueldo%TYPE;
+ 
+BEGIN
+   FETCH c_sueldo INTO reg_sueldo;
+   DBMS_OUTPUT.PUT_LINE(  ‘CODIGO’ || ‘ ‘ || ‘MINIMO’ || ‘       ‘ || ‘MAXIMO’);
+LOOP
+  FETCH c_sueldo INTO reg_sueldo;
+   DBMS_OUTPUT.PUT_LINE(  c_sueldo.grado || ‘      ‘ || c_sueldo.sueldo_minimo || ‘         ‘ || c_sueldo.sueldo_maximo);
+END LOOP;
+  CLOSE c_sueldo;
+   FETCH c_sueldo INTO reg_sueldo;
+EXCEPTION
+WHEN invalid_cursor THEN
+    DBMS_OUTPUT.PUT_LINE( ‘CURSOR INVÁLIDO’);
+END;
+
+
+9)	Cursor de actualización: Actualice el código de supervisor a 7697 a los empleados cuyo supervisor es el 7566. Verifique con un select antes de programar el bloque pl/sql a cuales empleados debiera modificar.
+
+10)	Cursor con parámetros: Implemente un cursor con el parámetro p_ubica de tipo CHAR seleccionando todos los datos de la tabla depto donde la ubicación sea igual al parámetro p_ubica. Al abrir el cursor coloque como parámetro ‘Valpo’, recorra el cursor y muestre el código del depto, el nombre del depto y la ubicación que debería ser ‘Valpo’.
+
+11)	Ejecute el siguiente código:
+
+DECLARE
+     CURSOR c_depto  IS
+	SELECT * from depto;
+
+var_depto              c_depto%ROWTYPE;
+V_LIDER              VARCHAR2(20) := 0;
+BEGIN
+       OPEN c_depto;
+        LOOP
+              FETCH c_depto  INTO var_depto;
+              EXIT WHEN c_depto%NOTFOUND;
+              IF c_depto%ISOPEN THEN
+                OPEN C_DEPTO;
+                        DECLARE
+                         I    number := 0;
+                         v_lider  varchar2(20);
+                         BEGIN
+                      	  IF var_depto.nom_depto = ‘Desarrollo’ then
+                         	V_lider := ‘SONDA’;
+                               I := i+1; DBMS_OUTPUT.PUT_LINE(VAR_DEPTO.NOM_DEPTO || ‘    ‘ || var_depto.ubicacion || v_lider || i);
+                 Elsif  var_depto.nom_depto = ‘Finanzas’ then
+                          	V_lider := ‘BANCO CHILE’;
+                                I:= i +2;
+ DBMS_OUTPUT.PUT_LINE(VAR_DEPTO.NOM_DEPTO || ‘    ‘ || var_depto.ubicacion || v_lider || i);
+                     End if;
+                     END;
+                END IF;
+                V_LIDER := V_LIDER +1;
+                DBMS_OUTPUT.PUT_LINE(V_LIDER);
+          END LOOP;
+              CLOSE c_depto;
+             FETCH c_depto  INTO var_depto;
+
+EXCEPTION
+WHEN CURSOR_ALREADY_OPEN THEN
+DBMS_OUTPUT.PUT_LINE (‘ERROR DE CURSOR ABIERTO’);
+WHEN invalid_cursor THEN
+DBMS_OUTPUT.PUT_LINE (‘ERROR DE CURSOR CERRADO’);
+END;
+a.	¿Qué instrucción gatilla el mensaje de error de cursor abierto? 
+b.	¿Qué instrucción gatilla el mensaje de error de cursor cerrado?
+c.	¿Cuántos sub-bloques existen?
+d.	¿Cuál es el alcance y la visibilidad de la(s) variable(s) v_lider?
+e.	¿Sirve que se coloque i:= i + n?
+f.	El resultado luego de depurado, debería mostrar:
+
+Finanzas      Valpo     BANCO CHILE2
+1
+Desarrollo    Stgo      SONDA1
+2
+3
+4
+
+Sin embargo, se pide que muestre lo siguiente:
+
+----------------------------------------------------------
+Depto:1
+Finanzas      Valpo     BANCO CHILE   Prioridad:2
+----------------------------------------------------------
+Depto:2
+Desarrollo    Stgo      SONDA   Prioridad:1
+----------------------------------------------------------
+Depto:3
+Ventas        Viña      MULTITIENDA   Prioridad:4
+----------------------------------------------------------
+Depto:4
+Operación     Quilpué   ORDEN Y GESTIÓN   Prioridad:3
+----------------------------------------------------------
+
+Reescriba el código de forma que muestre lo solicitado.
+
+Observación: 
+
+Al finalizar envie el archivo a catherine.gomez@usm.cl con el título PL_LAB_2 y en el email el nombre del alumno.

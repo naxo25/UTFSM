@@ -1,0 +1,16 @@
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\bin\Debug\BaseDeDatos.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.vbprojAssemblyReference.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.ConsultarIngresoEgreso.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.Consultar_clubes.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.Ingresar.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.Login.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.Resources.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.principal.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.vbproj.GenerateResource.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.vbproj.CoreCompileInputs.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\obj\Debug\BaseDeDatos.pdb

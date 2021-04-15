@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Calculadora de I.M.C</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Calculadora de I.M.C">
+            <p:fieldset legend="Datos que se necesitan">
+                <h:form>
+                    <h:panelGrid id="pnlFormulario" columns="3">
+
+                        
+                        <p:outputLabel for="correo" value="Correo" />
+                        <p:inputText id="correo" value="#{calc.correo}"
+                                     required="true"
+                                     requiredMessage="Ingresar correo electrónico (OBLIGATORIO)"
+                                     />
+                        <p:message for="correo"/>
+                        
+                        <p:outputLabel for="peso" value="Peso (en Kilos)" />
+                        <p:inputText id="peso" value="#{calc.peso}"
+                                     required="true"
+                                     requiredMessage="Ingrese el valor (OBLIGATORIO)"
+                                     converterMessage="Ingrese solo valores numéricos"
+
+                                     />
+                        <p:message for="peso"/>
+                        
+                        <p:outputLabel for="altura" value="Altura (en Metros)"/>
+                        <p:inputText id="altura" value="#{calc.altura}"
+                                     required="true"
+                                     requiredMessage="Ingrese el valor (OBLIGATORIO)"
+                                     converterMessage="Ingrese solo valores numéricos"
+                                     
+                                     />
+                        <p:message for="altura"/>
+                        <BR/>              
+                        <p:commandButton 
+                            value="Calcular"
+                            actionListener="#{calc.calcular()}"
+                            update="pnlFormulario"
+                            />                                    
+                    </h:panelGrid>
+                    <p:messages autoUpdate="true" showDetail="true" globalOnly="true"/>
+                </h:form>                
+            </p:fieldset>           
+        </p:panel> 
+    </h:body>
+</html>
+

@@ -1,0 +1,15 @@
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe.config
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\bin\Debug\BaseDeDatos.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.vbprojAssemblyReference.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.FrmConsultarAlumno.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.FrmLogin.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.FrmInsertarAlumno.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.FrmPrincipal.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.Resources.resources
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.vbproj.GenerateResource.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.vbproj.CoreCompileInputs.cache
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.exe
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.xml
+C:\Users\naxo\Desktop\U\taller de sw\1\prueba\BaseDeDatos\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
